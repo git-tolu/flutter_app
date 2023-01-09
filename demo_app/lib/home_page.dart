@@ -44,6 +44,22 @@ class HomePage extends StatelessWidget {
             child: const Text('Flutter Widgets'),
           ),
         ),
+        Container(
+          margin: EdgeInsets.all(10.0),
+          width: double.infinity,
+          child: ElevatedButton(
+            onPressed: () {
+              // Navigator.of(context).push(
+              //   MaterialPageRoute(
+              //     builder: (BuildContext context) {
+              //       return const FlutterWidget();
+              //     },
+              //   ),
+              // );
+            },
+            child: const Text('Take Notes '),
+          ),
+        ),
       ],
     );
   }
