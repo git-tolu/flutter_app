@@ -30,7 +30,10 @@ class rootPage extends StatefulWidget {
 
 class _rootPageState extends State<rootPage> {
   int currentPage = 0;
-  List<Widget> pages = const [HomePage(), ProfilePage(),];
+  List<Widget> pages = const [
+    HomePage(),
+    ProfilePage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +43,13 @@ class _rootPageState extends State<rootPage> {
       body: pages[currentPage],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          debugPrint('floating action button');
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) {
+                return const MyApp();
+              },
+            ),
+          );
         },
         child: Icon(Icons.home),
       ),
